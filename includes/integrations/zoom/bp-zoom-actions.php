@@ -161,7 +161,7 @@ function bp_zoom_pro_has_access_recording_url() {
  */
 function bp_zoom_pro_has_access_meeting_web() {
 	$zoom_web_meeting = filter_input( INPUT_GET, 'wm', FILTER_VALIDATE_INT );
-	$meeting_id       = filter_input( INPUT_GET, 'mi', FILTER_SANITIZE_STRING );
+	$meeting_id = filter_input( INPUT_GET, 'mi', FILTER_SANITIZE_NUMBER_INT );
 
 	if ( ! empty( $meeting_id ) && 1 === $zoom_web_meeting ) {
 
