@@ -2451,7 +2451,7 @@ window.Backbone = window.Backbone || [];
 		},
 
 		bb_unserialize: function ( serializedString ) {
-			var str   = decodeURI( serializedString );
+			var str   = encodeURIComponent( serializedString );
 			var pairs = str.split( '&' );
 			var obj   = {}, p, idx;
 			for ( var i = 0, n = pairs.length; i < n; i++ ) {
